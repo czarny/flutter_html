@@ -56,23 +56,23 @@ becomes...
   - [Constructors](#constructors)
 
   - [Parameters Table](#parameters)
-  
+
 - [External Packages](#external-packages)
-  
+
   - [`flutter_html_all`](#flutter_html_all)
-  
+
   - [`flutter_html_audio`](#flutter_html_audio)
-  
+
   - [`flutter_html_iframe`](#flutter_html_iframe)
-  
+
   - [`flutter_html_math`](#flutter_html_math)
-  
+
   - [`flutter_html_svg`](#flutter_html_svg)
-  
+
   - [`flutter_html_table`](#flutter_html_table)
 
   - [`flutter_html_video`](#flutter_html_video)
-  
+
 - [Frequently Asked Questions](#faq)
 
 - [Example](#example)
@@ -81,7 +81,7 @@ becomes...
 ## Why this package?
 
 This package is designed with simplicity in mind. Originally created to allow basic rendering of HTML content into the Flutter widget tree,
-this project has expanded to include support for basic styling as well! 
+this project has expanded to include support for basic styling as well!
 
 If you need something more robust and customizable, the package also provides a number of extension APIs for extremely granular control over widget rendering!
 
@@ -99,9 +99,9 @@ Below, you will find brief descriptions of the parameters the`Html` widget accep
 
 ### Constructors:
 
-The package currently has two different constructors - `Html()` and `Html.fromDom()`. 
+The package currently has two different constructors - `Html()` and `Html.fromDom()`.
 
-The `Html()` constructor is for those who would like to directly pass HTML from the source to the package to be rendered. 
+The `Html()` constructor is for those who would like to directly pass HTML from the source to the package to be rendered.
 
 If you would like to modify or sanitize the HTML before rendering it, then `Html.fromDom()` is for you - you can convert the HTML string to a `Document` and use its methods to modify the HTML as you wish. Then, you can directly pass the modified `Document` to the package. This eliminates the need to parse the modified `Document` back to a string, pass to `Html()`, and convert back to a `Document`, thus cutting down on load times.
 
@@ -155,9 +155,9 @@ Widget html = Html(
 
 ### `flutter_html_iframe`
 
-This package renders iframes using the [`webview_flutter`](https://pub.dev/packages/webview_flutter) plugin. 
+This package renders iframes using the [`webview_flutter`](https://pub.dev/packages/webview_flutter) plugin.
 
-When rendering iframes, the package considers the width, height, and sandbox attributes. 
+When rendering iframes, the package considers the width, height, and sandbox attributes.
 
 Sandbox controls the JavaScript mode of the webview - a value of `null` or `allow-scripts` will set `javascriptMode: JavascriptMode.unrestricted`, otherwise it will set `javascriptMode: JavascriptMode.disabled`.
 
@@ -216,7 +216,7 @@ You can analyze the error and the parsed string, and finally return a new instan
 If you have a Tex string you'd like to render inside your HTML you can do that using the same [`flutter_math_fork`](https://pub.dev/packages/flutter_math_fork) plugin.
 
 Use a custom tag inside your HTML (an example could be `<tex>`), and place your **raw** Tex string inside.
- 
+
 Then, use the `extensions` parameter to add the widget to render Tex. It could look like this:
 
 ```dart
@@ -355,3 +355,4 @@ Here's what the example in example/lib/main.dart looks like after being run (in 
 </tr>
 </table>
 
+Test
